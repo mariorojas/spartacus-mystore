@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DisplayConfigComponent } from './display-config/display-config.component';
+import { provideConfig } from '@spartacus/core';
+import { defaultThemeConfig } from './config/default-theme-config';
 
 
 
@@ -13,6 +15,9 @@ import { DisplayConfigComponent } from './display-config/display-config.componen
   ],
   exports: [
     DisplayConfigComponent
+  ],
+  providers: [
+    provideConfig(defaultThemeConfig)
   ]
 })
 export class GlobalConfigModule { }

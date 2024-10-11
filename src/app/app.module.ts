@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { SpartacusModule } from './spartacus/spartacus.module';
 import { OutletsModule } from "./spartacus/features/outlets/outlets.module";
 import { GlobalConfigModule } from "./spartacus/features/global-config/global-config.module";
+import { provideConfig } from "@spartacus/core";
+import { Theme, ThemeConfig } from "./spartacus/features/global-config/config/theme-config";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,11 @@ import { GlobalConfigModule } from "./spartacus/features/global-config/global-co
     OutletsModule,
     GlobalConfigModule
   ],
-  providers: [provideHttpClient(withFetch(), withInterceptorsFromDi())],
+  providers: [provideConfig(<ThemeConfig> {
+      theme: Theme.ICECREAM
+    }),
+    provideHttpClient(withFetch(),withInterceptorsFromDi())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
