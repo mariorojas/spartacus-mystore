@@ -8,3 +8,10 @@
     Campaign UI for Canon
   </div>
 </ng-template>
+
+<ng-template [cxOutletRef]="pdpOutlets.SUMMARY">
+  <div *ngIf="availableForPickup$ | async; else notAvailableMessage">
+    Available For Pickup
+  </div>
+</ng-template>
+<ng-template #notAvailableMessage>Not available for Pickup</ng-template>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { OutletPosition } from '@spartacus/storefront';
-import { CurrentProductService } from '@spartacus/storefront';
+import { CurrentProductService, ProductDetailOutlets } from '@spartacus/storefront';
 import { isNotNullable, Product } from '@spartacus/core';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
@@ -18,6 +18,10 @@ export class ExerciseOutletComponent {
   private product$: Observable<Product> = this.currentProductService.getProduct().pipe(filter(isNotNullable));
 
   isSelectedBrand$: Observable<boolean> = this.hasBrand('canon');
+
+  pdpOutlets = ProductDetailOutlets;
+
+  availableForPickup$: Observable<boolean> = this.product$.pipe(map(product => !!product.availableForPickup));
   
   hasBrand(brand: string) : Observable<boolean> {
     return this.product$.pipe(

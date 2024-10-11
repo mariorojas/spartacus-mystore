@@ -11,6 +11,9 @@ import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacu
     backend: {
       occ: {
         baseUrl: 'https://localhost:9002',
+        
+        // not available at 2024.10.11
+        //baseUrl: 'https://spartacus-demo.eastus.cloudapp.azure.com:8443',
       }
     },
   }), provideConfig(<SiteContextConfig>{
