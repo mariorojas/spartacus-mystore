@@ -7,6 +7,7 @@ import { AppRoutingModule } from "@spartacus/storefront";
 import { AppComponent } from './app.component';
 import { SpartacusModule } from './spartacus/spartacus.module';
 import { OutletsModule } from "./spartacus/features/outlets/outlets.module";
+import { GlobalConfigModule } from "./spartacus/features/global-config/global-config.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OutletsModule } from "./spartacus/features/outlets/outlets.module";
     AppRoutingModule,
     EffectsModule.forRoot([]),
     SpartacusModule,
-    OutletsModule
+    OutletsModule,
+    GlobalConfigModule
   ],
   providers: [provideHttpClient(withFetch(), withInterceptorsFromDi())],
   bootstrap: [AppComponent]
