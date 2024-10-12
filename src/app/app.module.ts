@@ -10,6 +10,7 @@ import { OutletsModule } from "./spartacus/features/outlets/outlets.module";
 import { GlobalConfigModule } from "./spartacus/features/global-config/global-config.module";
 import { provideConfig } from "@spartacus/core";
 import { Theme, ThemeConfig } from "./spartacus/features/global-config/config/theme-config";
+import { CustomLayoutModule } from "./spartacus/features/custom-layout/custom-layout.module";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Theme, ThemeConfig } from "./spartacus/features/global-config/config/th
     EffectsModule.forRoot([]),
     SpartacusModule,
     OutletsModule,
-    GlobalConfigModule
+    GlobalConfigModule,
+    //CustomLayoutModule
   ],
   providers: [provideConfig(<ThemeConfig> {
       theme: Theme.ICECREAM
