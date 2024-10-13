@@ -17,6 +17,7 @@ import { SmartEditFeatureModule } from './features/smartedit/smart-edit-feature.
 import { ProductVariantsFeatureModule } from './features/product/product-variants-feature.module';
 import { ProductImageZoomFeatureModule } from './features/product/product-image-zoom-feature.module';
 import { ExerciseCmscomponentsModule } from './features/exercise-cmscomponents/exercise-cmscomponents.module';
+import { ExerciseStaticCmsModule } from './features/exercise-static-cms/exercise-static-cms.module';
 
 @NgModule({
   declarations: [],
@@ -84,7 +85,8 @@ import { ExerciseCmscomponentsModule } from './features/exercise-cmscomponents/e
     SmartEditFeatureModule,
     ProductVariantsFeatureModule,
     ProductImageZoomFeatureModule,
-    ExerciseCmscomponentsModule
+    ExerciseCmscomponentsModule,
+    ExerciseStaticCmsModule,
   ]
 })
 export class SpartacusFeaturesModule { }
