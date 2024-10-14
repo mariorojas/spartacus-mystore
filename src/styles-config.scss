@@ -1,1 +1,4 @@
-$styleVersion: 2211.19
+$styleVersion: 2211.19;
+
+/* Opt-out of certain component styles */
+$skipComponentStyles: (cx-mini-cart);

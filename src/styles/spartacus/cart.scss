@@ -1,2 +1,34 @@
 @import "../../styles-config";
 @import "@spartacus/cart";
+
+%custom-mini-cart {
+  @extend %cx-mini-cart !optional;
+  a {
+    color: green;
+    position: relative;
+    display: block;
+    background-color: var(--cx-color-light);
+    .count {
+      color: white;
+      border: solid 2px var(--cx-color-dark);
+      background: var(--cx-color-primary);
+      border-radius: 5px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      top: -10px;
+      right: -10px;
+    }
+    .total {
+      color: blue;
+      display: block;
+    }
+  }
+}
+
+cx-mini-cart {
+  @extend %custom-mini-cart !optional;
+}
