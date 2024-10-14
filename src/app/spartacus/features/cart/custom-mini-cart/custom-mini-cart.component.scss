@@ -1,0 +1,29 @@
+@import "../../../../../styles/spartacus/cart.scss";
+
+:host {
+  @extend %custom-mini-cart !optional;
+}
+
+:host cx-cart-details {
+  visibility: hidden;
+  background-color: var(--cx-color-background);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  box-shadow: -5px 5px 2px 1px var(--cx-color-medium);
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  right: 50%;
+  margin-right: -60px;
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+:host:hover cx-cart-details {
+  visibility: visible;
+  opacity: 1;
+}

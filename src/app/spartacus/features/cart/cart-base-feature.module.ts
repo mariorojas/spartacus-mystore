@@ -20,7 +20,8 @@ import { CmsConfig, I18nConfig, provideConfig } from "@spartacus/core";
     featureModules: {
       [MINI_CART_FEATURE]: {
         module: () =>
-          import('@spartacus/cart/base/components/mini-cart').then((m) => m.MiniCartModule),
+          // import('@spartacus/cart/base/components/mini-cart').then((m) => m.MiniCartModule),
+          import('./custom-mini-cart/custom-mini-cart.module').then((m) => m.CustomMiniCartModule),
       },
     }
   }),
