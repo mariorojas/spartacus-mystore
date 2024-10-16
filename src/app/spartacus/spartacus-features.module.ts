@@ -18,6 +18,7 @@ import { ProductVariantsFeatureModule } from './features/product/product-variant
 import { ProductImageZoomFeatureModule } from './features/product/product-image-zoom-feature.module';
 import { ExerciseCmscomponentsModule } from './features/exercise-cmscomponents/exercise-cmscomponents.module';
 import { ExerciseStaticCmsModule } from './features/exercise-static-cms/exercise-static-cms.module';
+import { CustomRoutingModule } from './features/custom-routing/custom-routing.module';
 
 @NgModule({
   declarations: [],
@@ -87,6 +88,7 @@ import { ExerciseStaticCmsModule } from './features/exercise-static-cms/exercise
     ProductImageZoomFeatureModule,
     ExerciseCmscomponentsModule,
     ExerciseStaticCmsModule,
+    CustomRoutingModule,
   ]
 })
 export class SpartacusFeaturesModule { }
