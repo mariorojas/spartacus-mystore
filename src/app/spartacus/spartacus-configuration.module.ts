@@ -22,7 +22,7 @@ import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacu
     i18n: {
       resources: translations,
       chunks: translationChunksConfig,
-      fallbackLang: 'en'
+      fallbackLang: false
     },
   }), provideConfig(<FeaturesConfig>{
     features: {
