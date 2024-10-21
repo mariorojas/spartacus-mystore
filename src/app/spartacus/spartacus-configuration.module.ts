@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { translationChunksConfig, translations } from "@spartacus/assets";
-import { FeaturesConfig, I18nConfig, OccConfig, provideConfig, SiteContextConfig } from "@spartacus/core";
+import { FeaturesConfig, I18nConfig, OccConfig, PageMetaConfig, provideConfig, SiteContextConfig } from "@spartacus/core";
 import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacus/storefront";
 
 export const translationOverwrites = {
@@ -49,6 +49,43 @@ export const translationOverwrites = {
     features: {
       level: '2211.19'
     }
+  }), provideConfig(<PageMetaConfig>{
+    pageMeta: {
+      resolvers: [
+        {
+          property: 'title',
+          method: 'resolveTitle',
+        },
+        {
+          property: 'heading',
+          method: 'resolveHeading',
+        },
+        {
+          property: 'breadcrumbs',
+          method: 'resolveBreadcrumbs',
+        },
+        {
+          property: 'description',
+          method: 'resolveDescription',
+          disabledInCsr: false,
+        },
+        {
+          property: 'image',
+          method: 'resolveImage',
+          disabledInCsr: true,
+        },
+        {
+          property: 'robots',
+          method: 'resolveRobots',
+          disabledInCsr: false,
+        },
+        {
+          property: 'canonicalUrl',
+          method: 'resolveCanonicalUrl',
+          disabledInCsr: true,
+        },
+      ],
+    },
   })]
 })
 export class SpartacusConfigurationModule { }
