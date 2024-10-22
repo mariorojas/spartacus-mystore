@@ -21,6 +21,7 @@ import { ExerciseStaticCmsModule } from './features/exercise-static-cms/exercise
 import { CustomRoutingModule } from './features/custom-routing/custom-routing.module';
 import { ExerciseServicesModule } from './features/exercise-services/exercise-services.module';
 import { ExerciseSeoModule } from './features/exercise-seo/exercise-seo.module';
+import { CustomDatabindingModule } from './features/custom-databinding/custom-databinding.module';
 
 @NgModule({
   declarations: [],
@@ -93,6 +94,7 @@ import { ExerciseSeoModule } from './features/exercise-seo/exercise-seo.module';
     CustomRoutingModule,
     ExerciseServicesModule,
     ExerciseSeoModule,
+    CustomDatabindingModule,
   ]
 })
 export class SpartacusFeaturesModule { }
