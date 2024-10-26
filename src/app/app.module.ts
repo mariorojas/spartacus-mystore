@@ -12,6 +12,7 @@ import { provideConfig } from "@spartacus/core";
 import { Theme, ThemeConfig } from "./spartacus/features/global-config/config/theme-config";
 import { CustomLayoutModule } from "./spartacus/features/custom-layout/custom-layout.module";
 import { ExerciseTranslationsModule } from "./spartacus/features/exercise-translations/exercise-translations.module";
+import { ExerciseInternalsModule } from "./spartacus/features/exercise-internals/exercise-internals.module";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ExerciseTranslationsModule } from "./spartacus/features/exercise-transl
     GlobalConfigModule,
     //CustomLayoutModule
     ExerciseTranslationsModule,
+    ExerciseInternalsModule,
   ],
   providers: [provideConfig(<ThemeConfig> {
       theme: Theme.ICECREAM
